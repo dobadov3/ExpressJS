@@ -1,0 +1,14 @@
+extends ../layouts/common
+block content 
+    .container 
+        h1 CREATE 
+        if (errors)
+            each error in errors
+                .alert.alert-danger= error
+        form(action="/users/create", method="POST")
+            label(for="name", class="me-2") Name
+            input(type="text", name="name", class="form-control", value= values ? values.name : "")
+            label(for="phone", class="me-2") Phone
+            input(type="text", name="phone", class="form-control", value= values ? values.phone : "")
+
+            button(class="btn btn-primary mt-2") CREATE
