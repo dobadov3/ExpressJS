@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var usersRoute = require('./router/user.route');
+var productsRoute = require('./router/products.route');
 var port = 3000;
 app.set('view engine', 'pug');
 app.set('views', './views');
@@ -14,6 +15,7 @@ app.get('/', function(req, res){
 app.use(express.static('public'))
 
 app.use('/users', usersRoute);
+app.use('/products', productsRoute);
 
 app.listen(port, function(){
     console.log(`Example app listening at http://localhost:${port}`);

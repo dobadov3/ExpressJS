@@ -1,0 +1,42 @@
+extends ../layouts/common
+block content 
+    .container 
+        h1.text-center Products
+        .row 
+            each product in products 
+                .col-sm-6.col-md-4.col-lg-3 
+                    .card.mb-3.h-100
+                        img.card-img-top(src=product.image, alt='...')
+                        .card-body
+                            h5.card-title= product.name
+                            p.card-text= product.description
+                            a.ms-3-auto.btn.btn-primary(href='#') Add to cart
+    .container.d-flex.justify-content-center.mt-3.fixed-bottom 
+        nav(aria-label='Page navigation example')
+            ul.pagination
+                li.page-item
+                    a.page-link(href='/products?page=1', aria-label='Previous')
+                        span(aria-hidden='true') &laquo;
+                if page !== 1
+                    li.page-item
+                        a.page-link(href='/products?page=' + (page-1)) Previous
+                else 
+                    li.page-item.disabled
+                        a.page-link(href='/products?page=' + (page-1)) Previous
+                if page !== 1
+                    li.page-item
+                        a.page-link(href='/products?page=' + (page-1))= page-1
+                li.page-item
+                    a.page-link(href='/products?page=' + page)= page
+                if page !== (countItems/pageItems)
+                    li.page-item
+                        a.page-link(href='/products?page=' + (page+1))= page+1
+                if page !== (countItems/pageItems)
+                    li.page-item
+                        a.page-link(href='/products?page=' + (page+1)) Next
+                else
+                    li.page-item.disabled
+                        a.page-link(href='/products?page=' + (page+1)) Next
+                li.page-item
+                    a.page-link(href='/products?page=' + items, aria-label='Next')
+                        span(aria-hidden='true') &raquo;
