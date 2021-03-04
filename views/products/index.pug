@@ -1,0 +1,37 @@
+extends ../layouts/common
+block content 
+    h1(class="text-center") PRODUCTS 
+    .container 
+        .row 
+            each product in products
+                .col-sm-6.col-md-4.col-lg-3.mb-3
+                    .card.h-100
+                        img.card-img-top(src=product.image)
+                        .card-body
+                            h5.card-title= product.name
+                            p.card-text= product.description
+                            a.btn.btn-primary(href='#') Add to cart
+    .container
+        nav(aria-label='Page navigation example')
+            ul.pagination.d-flex.justify-content-center 
+                if currentPage != 1
+                    li.page-item
+                        a.page-link(href='/products?page=' + prevPage) Previous
+                else 
+                    li.page-item.disabled
+                        a.page-link(href='/products?page=' + prevPage) Previous
+                if currentPage != 1
+                    li.page-item
+                        a.page-link(href='/products?page=' + prevPage)= prevPage
+                li.page-item
+                    a.page-link(href='/products?page=' + currentPage)= currentPage
+                if currentPage != 7
+                    li.page-item
+                        a.page-link(href='/products?page=' + nextPage)= nextPage
+                if currentPage != 7
+                    li.page-item
+                        a.page-link(href='/products?page=' + nextPage) Next
+                else 
+                    li.page-item.disabled
+                        a.page-link(href='/products?page=' + nextPage) Next
+                        

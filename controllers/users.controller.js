@@ -1,4 +1,5 @@
 var db = require('../db');
+var md5 = require('md5');
 db.defaults({users: [] }).write();
 var ids = require('short-id');
 
@@ -32,7 +33,7 @@ module.exports.postCreate = function(req, res){
 
         return;
     }
-
+    req.body.password = md5(req.body.password);
     db.get('users').push(req.body).write();
     res.redirect('/users');
 };
@@ -45,7 +46,8 @@ module.exports.search = function(req, res){
     });
 
     res.render('./users/index', {
-        users: resultList
+        users: resultList,
+        value: q
     })
 };
 
