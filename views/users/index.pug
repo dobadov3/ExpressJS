@@ -8,14 +8,17 @@ block content
                 input(type="text", name="q", class="form-control", value=value)
                 button(class="btn btn-primary m-2") Search
 
-        table.table  
-            each user in users
-                tr
-                    td 
-                        span= user.name
-                        span &nbsp;
-                    td 
-                        span=user.phone 
-                        span &nbsp;
-                    td
-                        a(href="/users/" + user.id, class="btn btn-light") VIEW 
+        if users
+            table.table  
+                each user in users
+                    tr
+                        td 
+                            img.rounded-circle(src=user.avatar, width=50, height=50)
+                        td 
+                            span= user.name
+                            span &nbsp;
+                        td 
+                            span=user.phone 
+                            span &nbsp;
+                        td
+                            a(href="/users/" + user.id, class="btn btn-light") VIEW 

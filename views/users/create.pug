@@ -5,7 +5,7 @@ block content
         if (errors)
             each error in errors
                 .alert.alert-danger= error
-        form(action="/users/create", method="POST")
+        form(action="/users/create", method="POST", enctype="multipart/form-data")
             label(for="name", class="me-2") Name
             input(type="text", name="name", class="form-control", value= values ? values.name : "")
             label(for="phone", class="me-2") Phone
@@ -14,5 +14,9 @@ block content
             input(type="text", name="email", class="form-control", value= values ? values.phone : "")
             label(for="password", class="me-2") Password
             input(type="password", name="password", class="form-control", value= values ? values.phone : "")
+            label(for="avatar", class="me-2 mb-2") Avatar 
+            br
+            input(type="file", name="avatar", class="form-control-file mb-3")
+            br
 
             button(class="btn btn-primary mt-2") CREATE

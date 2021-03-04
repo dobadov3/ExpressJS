@@ -42,7 +42,9 @@ module.exports.postLogin = function(req, res){
         return;
     }
 
-    res.cookie('userID', user.id);
+    res.cookie('userID', user.id, {
+        signed: true
+    });
     res.render('./auth/success');
 };
 

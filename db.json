@@ -5,14 +5,16 @@
       "phone": "0944609933",
       "email": "dobadov3@gmail.com",
       "password": "d6812f2c6e4789dd215b8907d6b66462",
-      "id": "25fcaf"
+      "id": "25fcaf",
+      "avatar": "uploads\\26337bd0f4b1088bb13b6c29993a7524"
     },
     {
       "name": "Trình Hồng Bảo Thy",
       "phone": "0392717201",
       "email": "trinhhongbaothy@gmail.com",
       "password": "8a8c57a86be4db8ac819fb6404acbe5b",
-      "id": "e92f53"
+      "id": "e92f53",
+      "avatar": "uploads\\26337bd0f4b1088bb13b6c29993a7524"
     }
   ],
   "products": [
@@ -715,6 +717,90 @@
       "image": "https://www.focus2move.com/wp-content/uploads/2020/08/Tesla-Roadster-2020-1024-03.jpg",
       "price": 77,
       "description": "orchestrate intuitive methodologies"
+    }
+  ],
+  "session": [
+    {
+      "id": "7d77c6",
+      "cart": {
+        "ae60a18c-601e-469a-8e2c-c272186ebc5c": 1,
+        "28d548be-aa1c-4a80-96c2-aa7539e5adb1": 1,
+        "fdc6bf50-8408-4a91-883e-85e1eb5dbcc9": 1,
+        "136e2ac0-c6c4-4995-aceb-beba1ec01f79": 1
+      }
+    },
+    {
+      "id": "ad336a"
+    },
+    {
+      "id": "41ea89",
+      "cart": {
+        "28d548be-aa1c-4a80-96c2-aa7539e5adb1": 10,
+        "ae60a18c-601e-469a-8e2c-c272186ebc5c": 10,
+        "fdc6bf50-8408-4a91-883e-85e1eb5dbcc9": 10,
+        "136e2ac0-c6c4-4995-aceb-beba1ec01f79": 11
+      }
+    },
+    {
+      "id": "5c9ca0"
+    },
+    {
+      "id": "8b50a0",
+      "cart": {
+        "ae60a18c-601e-469a-8e2c-c272186ebc5c": 10,
+        "28d548be-aa1c-4a80-96c2-aa7539e5adb1": 5,
+        "fdc6bf50-8408-4a91-883e-85e1eb5dbcc9": 6,
+        "136e2ac0-c6c4-4995-aceb-beba1ec01f79": 7
+      }
+    },
+    {
+      "id": "a30627",
+      "cart": {
+        "ae60a18c-601e-469a-8e2c-c272186ebc5c": 3
+      }
+    },
+    {
+      "id": "ab3cfc",
+      "cart": {
+        "ae60a18c-601e-469a-8e2c-c272186ebc5c": 2,
+        "28d548be-aa1c-4a80-96c2-aa7539e5adb1": 2
+      }
+    },
+    {
+      "id": "23458f"
+    },
+    {
+      "id": "1fd5a5"
+    },
+    {
+      "id": "5786d2"
+    },
+    {
+      "id": "3a0e9a"
+    },
+    {
+      "id": "1488f6"
+    },
+    {
+      "id": "ddbd1e"
+    },
+    {
+      "id": "0d2e57"
+    },
+    {
+      "id": "3e2435"
+    },
+    {
+      "id": "3932cb",
+      "cart": {
+        "ae60a18c-601e-469a-8e2c-c272186ebc5c": 3
+      }
+    },
+    {
+      "id": "cda7a0",
+      "cart": {
+        "ae60a18c-601e-469a-8e2c-c272186ebc5c": 2
+      }
     }
   ]
 }

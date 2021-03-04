@@ -1,6 +1,5 @@
 var db = require('../db');
 var md5 = require('md5');
-db.defaults({users: [] }).write();
 var ids = require('short-id');
 
 module.exports.get = function(req, res){
@@ -25,6 +24,14 @@ module.exports.postCreate = function(req, res){
         errors.push('Phone is required!')
     }
 
+    if (!req.body.email){
+        errors.push('Email is required!')
+    }
+
+    if (!req.body.password){
+        errors.push('Password is required!')
+    }
+
     if (errors.length){
         res.render('./users/create', {
             errors: errors,
@@ -34,6 +41,7 @@ module.exports.postCreate = function(req, res){
         return;
     }
     req.body.password = md5(req.body.password);
+    req.body.avatar = req.file.path.split('\\').slice(1).join('\\');
     db.get('users').push(req.body).write();
     res.redirect('/users');
 };

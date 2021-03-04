@@ -15,3 +15,19 @@ module.exports.get = function(req, res){
         countItems: 100
     });
 }
+
+module.exports.addToCart = function(req, res){
+    var productId = req.params.productId;
+    var sessionID = req.signedCookies.sessionID;
+    console.log(sessionID);
+    if (!sessionID){
+        res.redirect('/products');
+        return;
+    }
+
+    var count = db.get('session').find({id:sessionID}).get('cart.'+productId, 0).value();
+
+    db.get('session').find({id: sessionID}).set('cart.' + productId, count+1).write();
+
+    res.redirect('/products');
+}

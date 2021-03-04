@@ -4,6 +4,8 @@ var controller = require('../controllers/products.controller');
 
 var router = express.Router();
 
-router.use('/', controller.get);
+router.get('/', controller.get);
+
+router.get('/add/:productId', controller.addToCart);
 
 module.exports = router;
