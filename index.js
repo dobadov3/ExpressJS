@@ -1,15 +1,24 @@
 var express = require('express');
+
+require('dotenv').config();
 var cookieParser = require('cookie-parser');
+var shortID = require('short-id');
+var mongoose = require('mongoose');
+mongoose.connect(process.env.MONGO_URL);
 var app = express();
+
 var usersRoute = require('./router/user.route');
 var authRoute = require('./router/auth.route');
 var productsRoute = require('./router/products.route');
+
 var authMiddlewares = require('./middlewares/auth.middleware');
 var sessionMiddlewares = require('./middlewares/session.middleware');
-var shortID = require('short-id');
+
 var port = 3000;
+
 app.set('view engine', 'pug');
 app.set('views', './views');
+
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(cookieParser(shortID.generate()));

@@ -15,6 +15,14 @@
       "password": "8a8c57a86be4db8ac819fb6404acbe5b",
       "id": "e92f53",
       "avatar": "uploads\\26337bd0f4b1088bb13b6c29993a7524"
+    },
+    {
+      "name": "admin",
+      "phone": "0000000000",
+      "email": "admin@gmail.com",
+      "password": "21232f297a57a5a743894a0e4a801fc3",
+      "id": "5bdf5f",
+      "avatar": "uploads\\8e0d4e006186c688331dfe23bc60b817"
     }
   ],
   "products": [
@@ -721,86 +729,63 @@
   ],
   "session": [
     {
-      "id": "7d77c6",
+      "id": "0895ce",
       "cart": {
         "ae60a18c-601e-469a-8e2c-c272186ebc5c": 1,
-        "28d548be-aa1c-4a80-96c2-aa7539e5adb1": 1,
-        "fdc6bf50-8408-4a91-883e-85e1eb5dbcc9": 1,
-        "136e2ac0-c6c4-4995-aceb-beba1ec01f79": 1
+        "28d548be-aa1c-4a80-96c2-aa7539e5adb1": 3,
+        "fdc6bf50-8408-4a91-883e-85e1eb5dbcc9": 4
       }
     },
     {
-      "id": "ad336a"
+      "id": "7b04cc"
     },
     {
-      "id": "41ea89",
-      "cart": {
-        "28d548be-aa1c-4a80-96c2-aa7539e5adb1": 10,
-        "ae60a18c-601e-469a-8e2c-c272186ebc5c": 10,
-        "fdc6bf50-8408-4a91-883e-85e1eb5dbcc9": 10,
-        "136e2ac0-c6c4-4995-aceb-beba1ec01f79": 11
-      }
+      "id": "07de4c"
     },
     {
-      "id": "5c9ca0"
+      "id": "f16732"
     },
     {
-      "id": "8b50a0",
-      "cart": {
-        "ae60a18c-601e-469a-8e2c-c272186ebc5c": 10,
-        "28d548be-aa1c-4a80-96c2-aa7539e5adb1": 5,
-        "fdc6bf50-8408-4a91-883e-85e1eb5dbcc9": 6,
-        "136e2ac0-c6c4-4995-aceb-beba1ec01f79": 7
-      }
+      "id": "3fe85b"
     },
     {
-      "id": "a30627",
-      "cart": {
-        "ae60a18c-601e-469a-8e2c-c272186ebc5c": 3
-      }
+      "id": "bb474e"
     },
     {
-      "id": "ab3cfc",
-      "cart": {
-        "ae60a18c-601e-469a-8e2c-c272186ebc5c": 2,
-        "28d548be-aa1c-4a80-96c2-aa7539e5adb1": 2
-      }
+      "id": "a1e11d"
     },
     {
-      "id": "23458f"
+      "id": "9b3605"
     },
     {
-      "id": "1fd5a5"
+      "id": "c83cec"
     },
     {
-      "id": "5786d2"
+      "id": "02e39f"
     },
     {
-      "id": "3a0e9a"
+      "id": "80a905"
     },
     {
-      "id": "1488f6"
+      "id": "893739"
     },
     {
-      "id": "ddbd1e"
+      "id": "9ec8f2"
     },
     {
-      "id": "0d2e57"
+      "id": "5ec63b"
     },
     {
-      "id": "3e2435"
+      "id": "e4d57c"
     },
     {
-      "id": "3932cb",
-      "cart": {
-        "ae60a18c-601e-469a-8e2c-c272186ebc5c": 3
-      }
+      "id": "ddaf51"
     },
     {
-      "id": "cda7a0",
-      "cart": {
-        "ae60a18c-601e-469a-8e2c-c272186ebc5c": 2
-      }
+      "id": "d40f60"
+    },
+    {
+      "id": "80bf25"
     }
   ]
 }

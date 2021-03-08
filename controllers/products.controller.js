@@ -1,17 +1,18 @@
 var db = require('../db');
+var Product = require('../models/product.model');
 
-module.exports.get = function(req, res){
+module.exports.get = async function(req, res){
     var page = req.query.page || 1;
-    var pageItems = 4;
-    var begin = (page - 1) * pageItems;
-    var end = page * pageItems;
-    var products = db.get('products').slice(begin, end).value();
+    var limit = 4;
+    var begin = (page - 1) * limit;
+    var end = page * limit;
+    var products = await Product.find();
     
     res.render('./products/index', {
-        products: products,
+        products: products.slice(begin, end),
         page: parseInt(page),
-        pageItems: parseInt(pageItems),
-        items: (db.get('products').value().length)/pageItems,
+        limit: parseInt(limit),
+        items: (products.length)/limit,
         countItems: 100
     });
 }
