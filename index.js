@@ -6,6 +6,7 @@ var shortID = require('short-id');
 var mongoose = require('mongoose');
 mongoose.connect(process.env.MONGO_URL);
 var app = express();
+var port = 3000;
 
 var usersRoute = require('./router/user.route');
 var authRoute = require('./router/auth.route');
@@ -13,8 +14,6 @@ var productsRoute = require('./router/products.route');
 
 var authMiddlewares = require('./middlewares/auth.middleware');
 var sessionMiddlewares = require('./middlewares/session.middleware');
-
-var port = 3000;
 
 app.set('view engine', 'pug');
 app.set('views', './views');
